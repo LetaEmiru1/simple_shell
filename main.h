@@ -12,5 +12,7 @@
 #define MAX_ARG_SIZE 128
 #define MAX_ARGS 32
 int path_finder(int ac, char **av);
+char* tokenize_input(char* input, char* args[]);
+pid_t parent_pid();
 
 #endif
