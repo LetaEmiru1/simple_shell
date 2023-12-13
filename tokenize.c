@@ -4,7 +4,7 @@ char* tokenize_input(char* input, char* args[])
 {
 	char* token = strtok(input, " \t\n");
 	int i = 0;
-	args[i++] = token; //sets args[0] before entering the loop.
+	args[i++] = token;
 
 	while (token != NULL && i < MAX_ARG_SIZE-1)
 	{
@@ -15,4 +15,5 @@ char* tokenize_input(char* input, char* args[])
 	}
 
 	args[i] = NULL;
+	return (token);
 }

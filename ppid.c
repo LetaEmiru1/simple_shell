@@ -8,4 +8,5 @@ pid_t parent_pid()
 	ssize_t parent;
 	parent = getppid();
 	printf("%ld\n", parent);
+	return (0);
 }

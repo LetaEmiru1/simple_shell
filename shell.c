@@ -5,13 +5,13 @@
  */
 int main(void)
 {
-	extern char** environ;
+	extern char **environ;
 	char input[MAX_INPUT];
 	char *args[MAX_ARGS];
 	pid_t child_pid;
 	int waitstatus;
 	ssize_t read_char;
-    
+
 	while (1)
 	{
 		write(STDOUT_FILENO, "#cisfun$ ", 9);
@@ -27,11 +27,10 @@ int main(void)
 			input[read_char - 1] = '\0';
 		}
 		tokenize_input(input, args);
-
-		if ( access(input, X_OK) == 0)
+		if (access(input, X_OK) == 0)
 		{
 			child_pid = fork();
-			if(child_pid == -1)
+			if (child_pid == -1)
 			{
 				perror("Error forking.");
 				exit(EXIT_FAILURE);
